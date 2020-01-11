@@ -17,7 +17,7 @@ RUN yum install -y yum-plugin-fastestmirror && \
     yum -y install bzip2 cronie httpd mysql mod_perl openldap-clients \
     perl-core "perl(Crypt::SSLeay)" "perl(Net::LDAP)" "perl(URI)" \
     procmail "perl(Date::Format)" "perl(LWP::UserAgent)" \
-    "perl(Net::DNS)" "perl(IO::Socket::SSL)" "perl(XML::Parser)" \
+    "perl(Net::DNS)" "perl(Net::SMTP)" "perl(IO::Socket::SSL)" "perl(XML::Parser)" \
     "perl(Apache2::Reload)" "perl(Crypt::Eksblowfish::Bcrypt)" \
     "perl(Encode::HanExtra)" "perl(GD)" "perl(GD::Text)" "perl(GD::Graph)" \
     "perl(JSON::XS)" "perl(Mail::IMAPClient)" "perl(PDF::API2)" "perl(DateTime)" \
