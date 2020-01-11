@@ -17,7 +17,7 @@ RUN yum install -y yum-plugin-fastestmirror && \
     yum -y install bzip2 cronie httpd mysql mod_perl \
     perl-core procmail \
     rsyslog supervisor tar which && \
-    yum -y install cpanm gcc perl perl-App-cpanminus perl-Config-Tiny && \
+    yum -y install cpanm gcc perl perl-App-cpanminus perl-Config-Tiny perl-DBD-mysql && \
     cpanm install Crypt::SSLeay ; \
     cpanm install Net::LDAP ; \
     cpanm install Net::SMTP ; \
