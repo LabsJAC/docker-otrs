@@ -17,7 +17,7 @@ RUN yum install -y yum-plugin-fastestmirror && \
     yum -y install bzip2 cronie httpd mysql mod_perl \
     perl-core procmail \
     rsyslog supervisor tar which && \
-    yum -y install cpanm gcc perl perl-App-cpanminus perl-Config-Tiny perl-DBD-mysql && \
+    yum -y install cpanm gcc perl perl-App-cpanminus perl-Config-Tiny && \
     cpanm install Crypt::SSLeay ; \
     cpanm install Net::LDAP ; \
     cpanm install Net::SMTP ; \
@@ -41,7 +41,7 @@ RUN yum install -y yum-plugin-fastestmirror && \
     cpanm install Text::CSV_XS ; \
     cpanm install YAML::XS ; \
     cpanm install Text::CSV_XS ; \
-    cpanm install DBD::mysql ; \
+    yum install -y perl-DBD-mysql && \
     yum install -y http://ftp.otrs.org/pub/otrs/RPMS/rhel/7/otrs-${OTRS_VERSION}.noarch.rpm && \
     /opt/otrs/bin/otrs.CheckModules.pl && \
     yum clean all
